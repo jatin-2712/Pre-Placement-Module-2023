@@ -1,0 +1,26 @@
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+
+         
+        int [] arr = new int [m+n];
+        int k=0;
+        for(int i=0 ; i< nums1.length ; i++){
+            if(nums1[i]!=0)
+            {arr[k]=nums1[i];
+                k++;}
+        }
+        
+        int num=k;
+        for(int j=0 ; j<nums2.length ;j++){
+            if(nums2[j]!=0)
+            {arr[num]=nums2[j];
+                num++;}
+        }
+         
+        Arrays.sort(arr);
+        for(int row =0 ; row<arr.length ; row++){
+            nums1[row]=arr[row];
+        }
+         
+    }
+}
